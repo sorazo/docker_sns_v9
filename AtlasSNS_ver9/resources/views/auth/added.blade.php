@@ -1,10 +1,20 @@
 <x-logout-layout>
-  <div id="clear">
-    <p>〇〇さん</p>
-    <p>ようこそ！AtlasSNSへ！</p>
-    <p>ユーザー登録が完了しました。</p>
-    <p>早速ログインをしてみましょう。</p>
+  <div class="text-center">
+    <div class="mb-4">
+      <x-atoms.p style="font-size: 1.15rem;">
+        <x-atoms.span>{{ session('username') }}</x-atoms.span>さん
+      </x-atoms.p>
+      <x-atoms.p>ようこそ！
+        <x-atoms.span>AtlasSNSへ</x-atoms.span>
+      </x-atoms.p>
+    </div>
+    <div class="mb-3">
+      <x-atoms.p>ユーザー登録が完了しました。</x-atoms.p>
+      <x-atoms.p>早速ログインをしてみましょう。</x-atoms.p>
+    </div>
 
-    <p class="btn"><a href="login">ログイン画面へ</a></p>
+    <x-atoms.p class="btn btn btn-danger">
+      <x-atoms.a href="login">ログイン画面へ</x-atoms.a>
+    </x-atoms.p>
   </div>
 </x-logout-layout>

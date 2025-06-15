@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function() {
     ], function () {
       Route::get('follow/list', FollowListIndexController::class);
       Route::get('follower/list', FollowerListIndexController::class);
-      Route::post('/follow/{id}', UpdateController::class);
+      Route::post('/follow/{id}', StoreController::class);
       Route::delete('/follow/{id}', DestroyController::class);
     });
 });

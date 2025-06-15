@@ -242,7 +242,6 @@ th {
   :after,
   :before {
     background: 0 0 !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important
   }
@@ -1438,7 +1437,7 @@ a {
 a:focus,
 a:hover {
   color: #216a94;
-  text-decoration: underline
+  /* text-decoration: underline */
 }
 
 a:focus {
@@ -3897,10 +3896,9 @@ textarea.input-lg {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
   line-height: 1.6;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -3920,8 +3918,7 @@ textarea.input-lg {
 }
 
 .btn.focus,
-.btn:focus,
-.btn:hover {
+.btn:focus {
   color: #636b6f;
   text-decoration: none
 }

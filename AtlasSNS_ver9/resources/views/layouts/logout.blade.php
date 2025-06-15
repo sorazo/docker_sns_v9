@@ -10,6 +10,7 @@
         <title></title>
 
         <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/logout.css') }} ">
         <!--スマホ,タブレット対応-->
@@ -22,16 +23,16 @@
         <!--iphoneのアプリアイコン指定-->
         <link rel="apple-touch-icon-precomposed" href="画像のURL" />
     </head>
-    <body>
-        <header>
-            <h1><img src="images/atlas.png"></h1>
-            <p>Social Network Service</p>
+    <body class="text-light py-5">
+        <header class="mb-3">
+            <h1 class="text-center mt-5">
+                <x-atoms.logo width="200px" /><br>
+                <x-atoms.span class="text-light">Social Network Service</x-atoms.span>
+            </h1>
         </header>
-        <div id="container">
+        <x-organisms.shadow-box>
             {{ $slot }}
-        </div>
+        </x-organisms.shadow-box>
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="JavaScriptファイルのURL"></script>
-        <script src="JavaScriptファイルのURL"></script>
     </body>
 </html>

@@ -1,19 +1,26 @@
 <x-logout-layout>
 
   <!-- 適切なURLを入力してください -->
-  {!! Form::open(['url' => '〇〇']) !!}
+    {!! Form::open(['url' => 'login']) !!}
 
-  <p>AtlasSNSへようこそ</p>
+    <x-atoms.h2>AtlasSNSへようこそ</x-atoms.h2>
 
-  {{ Form::label('email') }}
-  {{ Form::text('email',null,['class' => 'input']) }}
-  {{ Form::label('password') }}
-  {{ Form::password('password',['class' => 'input']) }}
+    <x-atoms.label for="email">メールアドレス</x-atoms.label>
+    <x-atoms.input type="email" name="email" class="mb-3" />
 
-  {{ Form::submit('ログイン') }}
+    <x-atoms.label for="password">パスワード</x-atoms.label>
+    <x-atoms.input type="password" name="password" class="mb-3" />
 
-  <p><a href="register">新規ユーザーの方はこちら</a></p>
+    <div class="fw-normal text-end">
+      <x-atoms.danger-button class="mb-4">ログイン</x-atoms.danger-button>
+    </div>
 
-  {!! Form::close() !!}
+    <x-atoms.p class="text-center">
+      <x-atoms.a href="register" class="text-decoration-underline">新規ユーザーの方はこちら</x-atoms.a>
+    </x-atoms.p>
+
+    {!! Form::close() !!}
+
+
 
 </x-logout-layout>
