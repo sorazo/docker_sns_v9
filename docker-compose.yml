@@ -7,6 +7,8 @@ services:
     volumes:
       - .:/var/www
     working_dir: /var/www
+    ports:
+      - "5173:5173"
   nginx:
     image: nginx
     container_name: nginx_sns
